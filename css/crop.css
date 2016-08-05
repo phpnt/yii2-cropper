@@ -1,0 +1,43 @@
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100px;
+    min-height: 100px;
+    font-size: 0;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: pointer;
+    display: block;
+}
+.imageLoaderClass {
+    width: 100%;
+    border: 1px solid #cccccc;
+}
+.btn-imageDelete {
+    position: absolute !important;
+    top: 20px !important;
+    right: 25px !important;
+    z-index: 1 ;
+}
+.imageContainer {
+    position: relative !important;
+    float: left;
+}
+.formImageContainer {
+    float: left;
+}
+.image-padding {
+    padding: 15px;
+}
+
+
+
+

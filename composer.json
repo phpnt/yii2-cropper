@@ -1,0 +1,30 @@
+{
+    "name": "phpnt/yii2-cropper",
+    "description": "Yii2 Cropper",
+    "keywords": ["yii2", "phpnt", "cropper"],
+    "type": "yii2-extension",
+    "license": "MIT",
+    "minimum-stability" : "dev",
+    "prefer-stable": true,
+    "support": {
+        "source": "https://github.com/phpnt/yii2-cropper"
+    },
+    "authors": [
+        {
+            "name": "phpNT",
+            "email": "phpnt@phpnt.com",
+            "homepage": "http://phpnt.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "*",
+        "bower-asset/cropper": "*",
+        "phpnt/bootstrap-notify": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "phpnt\\cropper\\": ""
+        }
+    }
+}
