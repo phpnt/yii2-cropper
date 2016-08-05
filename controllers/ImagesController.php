@@ -7,7 +7,6 @@
  */
 namespace phpnt\cropper\controllers;
 
-use app\models\Photo;
 use yii\helpers\Json;
 use phpnt\cropper\models\ImageForm;
 use yii\web\Controller;
@@ -41,7 +40,7 @@ class ImagesController extends Controller
         $render = ($imageData['images_num'] == 1) ? '_image' : '_image-many';
 
         return $this->render(
-            '@app/widgets/ImageLoad/views/'.$render,
+            '@vendor/phpnt/yii2-cropper/views/'.$render,
             [
                 'imagesObject'              => $imagesObject,
                 'modelImageForm'            => $modelImageForm,
@@ -94,7 +93,7 @@ class ImagesController extends Controller
         $render = ($imageData['images_num'] == 1) ? '_image' : '_image-many';
 
         return $this->render(
-            '@app/widgets/ImageLoad/views/'.$render,
+            '@vendor/phpnt/yii2-cropper/views/'.$render,
             [
                 'imagesObject'              => $imagesObject,
                 'modelImageForm'            => $modelImageForm,
@@ -136,7 +135,7 @@ class ImagesController extends Controller
         if(!flock($fh, LOCK_EX | LOCK_NB))
             die('Script blocked');
         foreach($photos as $one) {
-            /* @var $one Photo */
+            /* @var $one \phpnt\cropper\models\Photo */
             if ($modelImageForm->deleteImageFile($alias, $one->file)) {
                 if ($modelImageForm->deleteImageFile($alias, $one->file_small)) {
                     $one->delete();
