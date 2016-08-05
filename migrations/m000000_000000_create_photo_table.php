@@ -1,7 +1,7 @@
 <?php
 use yii\db\Migration;
 
-class m151018_040326_create_images_table extends Migration
+class m000000_000000_create_photo_table extends Migration
 {
     public function safeUp()
     {
