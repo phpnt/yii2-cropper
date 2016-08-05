@@ -12,7 +12,7 @@ use yii\web\AssetBundle;
 
 class DistAsset extends AssetBundle
 {
-    public $sourcePath = '@app/widgets/ImageLoad';
+    public $sourcePath = '@vendor/phpnt/yii2-cropper';
 
     public $css = [
         'css/crop.css'
