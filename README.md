@@ -133,7 +133,7 @@ public function getPhotosSome()
     }
 ```
 ### Удаление изображений кроном:
-# http://example.com/images/delete?alias=@webroot
+# http://phpnt.com/images/delete?alias=@frontend/web
 ###### , где alias - алиас к папке с изображениями.
 # Документация (примеры):
 ## [Cropper](https://fengyuanchen.github.io/cropper/)
