@@ -66,7 +66,7 @@ $form = ActiveForm::begin(
 <?php
 if ($imagesObject):
     foreach($imagesObject as $image):
-        $imageFileSmall = $frontendUrl.$image->file; ?>
+        $imageFileSmall = $frontendUrl.$image->$previewSize; ?>
         <div class="<?= $imageContainerClass ?> image-padding">
             <?= Html::button('', ['class' => $buttonDeleteClass, 'onClick' => "window.idImage = '".$image->id."'; deleteImage(event);"]); ?>
             <?= Html::img($imageFileSmall, ['class' => $imageClass, 'onclick' => "window.idImage = '".$image->id."'; $('#imageform-image-$id').click();"]); ?>
