@@ -72,6 +72,10 @@ if ($imagesObject):
             <?= Html::img($imageFileSmall, ['class' => $imageClass, 'onclick' => "window.idImage = '".$image->id."'; $('#imageform-image-$id').click();"]); ?>
             <?= Html::button($updateImageText, ['class' => $buttonClass, 'style' => 'width: 100%;', 'onclick' => "window.idImage = '".$image->id."'; $('#imageform-image-$id').click();"]) ?>
         </div>
+        <a href="" class="pmop-edit" onclick => <?php echo "window.idImage = '".$image->id."'; $('#imageform-image-$id').click();"; ?>>
+            <i class="zmdi zmdi-camera"></i> <span
+            class="hidden-xs">Обновить фотографию профиля</span>
+        </a>
     <?php endforeach;
 else:
     ?>
@@ -79,6 +83,10 @@ else:
         <?= Html::img($noImage, ['class' => $imageClass, 'onclick' => "window.idImage = 0; $('#imageform-image-$id').click();"]); ?>
         <?= Html::button($createImageText, ['class' => $buttonClass, 'style' => 'width: 100%;', 'onclick' => " window.idImage = 0; $('#imageform-image-$id').click();"]) ?>
     </div>
+    <a href="" class="pmop-edit" onclick => <?php echo "window.idImage = 0; $('#imageform-image-$id').click();"; ?>>
+            <i class="zmdi zmdi-camera"></i> <span
+            class="hidden-xs">Обновить фотографию профиля</span>
+    </a>
     <?php
 endif;
 
