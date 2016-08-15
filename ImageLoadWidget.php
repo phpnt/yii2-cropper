@@ -33,6 +33,7 @@ class ImageLoadWidget extends Widget
     public $updateImageText     = 'Изменить фото';
     public $deleteImageText     = 'Удалить фото';
     public $headerModal         = 'Загрузить аватар';   // заголовок в модальном окне
+    public $buttonClass         = 'btm btn-info';   // класс для кнопок - загрузить/обновить
     public $sizeModal           = 'modal-lg';           // размер модального окна
     public $frontendUrl         = '';
     public $baseUrl             = '@webroot';           // алиас к изображениям

@@ -70,14 +70,14 @@ if ($imagesObject):
         <div class="<?= $imageContainerClass ?> image-padding">
             <?= Html::button('', ['class' => $buttonDeleteClass, 'onClick' => "window.idImage = '".$image->id."'; deleteImage(event);"]); ?>
             <?= Html::img($imageFileSmall, ['class' => $imageClass, 'onclick' => "window.idImage = '".$image->id."'; $('#imageform-image-$id').click();"]); ?>
-            <?= Html::button($updateImageText, ['class' => 'btm btn-info', 'style' => 'width: 100%;', 'onclick' => "window.idImage = '".$image->id."'; $('#imageform-image-$id').click();"]) ?>
+            <?= Html::button($updateImageText, ['class' => $buttonClass, 'style' => 'width: 100%;', 'onclick' => "window.idImage = '".$image->id."'; $('#imageform-image-$id').click();"]) ?>
         </div>
     <?php endforeach;
 else:
     ?>
     <div class="<?= $imageContainerClass; ?> image-padding">
         <?= Html::img($noImage, ['class' => $imageClass, 'onclick' => "window.idImage = 0; $('#imageform-image-$id').click();"]); ?>
-        <?= Html::button($createImageText, ['class' => 'btm btn-info', 'style' => 'width: 100%;', 'onclick' => " window.idImage = 0; $('#imageform-image-$id').click();"]) ?>
+        <?= Html::button($createImageText, ['class' => $buttonClass, 'style' => 'width: 100%;', 'onclick' => " window.idImage = 0; $('#imageform-image-$id').click();"]) ?>
     </div>
     <?php
 endif;
