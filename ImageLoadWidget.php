@@ -33,6 +33,8 @@ class ImageLoadWidget extends Widget
     public $updateImageText     = 'Изменить фото';
     public $deleteImageText     = 'Удалить фото';
     public $headerModal         = 'Загрузить аватар';   // заголовок в модальном окне
+    public $buttonClass         = 'btm btn-info';       // класс для кнопок - загрузить/обновить
+    public $previewSize         = 'file_small';         // размер изображения для превью(либо file_small, либо просто file)
     public $sizeModal           = 'modal-lg';           // размер модального окна
     public $frontendUrl         = '';
     public $baseUrl             = '@webroot';           // алиас к изображениям
@@ -153,6 +155,8 @@ JS;
                         image_id: window.idImage,
                         images_num: "$this->images_num",
                         images_label: "$this->images_label",
+                        buttonClass: "$this->buttonClass",
+                        previewSize: "$this->previewSize",
                         images_temp: "$this->images_temp",
                         imageSmallWidth: "$this->imageSmallWidth",
                         imageSmallHeight: "$this->imageSmallHeight",
@@ -271,6 +275,8 @@ JS;
                         image_id: window.idImage,
                         images_num: "$this->images_num",
                         images_label: "$this->images_label",
+                        buttonClass: "$this->buttonClass",
+                        previewSize: "$this->previewSize",
                         images_temp: "$this->images_temp",
                         imageSmallWidth: "$this->imageSmallWidth",
                         imageSmallHeight: "$this->imageSmallHeight",

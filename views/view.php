@@ -21,6 +21,8 @@ echo $this->render(
         'images_label'              => $widget->images_label,
         'images_temp'               => $widget->images_temp,
         'imageSmallWidth'           => $widget->imageSmallWidth,
+        'buttonClass'               => $widget->buttonClass,
+        'previewSize'               => $widget->previewSize,
         'imageSmallHeight'          => $widget->imageSmallHeight,
         'imagesObject'              => $widget->imagesObject,
         'modelImageForm'            => $modelImageForm,

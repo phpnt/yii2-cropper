@@ -69,6 +69,8 @@ use phpnt\cropper\ImageLoadWidget;
             'imageSmallHeight' => 750,                                      // высота миниатюры
             'imagePath' => '/uploads/avatars/',                             // путь, куда будут записыватся изображения относительно алиаса
             'noImage' => 2,                                                 // 1 - no-logo, 2 - no-avatar, 3 - no-img или путь к другой картинке
+            'buttonClass'=> 'btm btn-info',                                 // класс кнопки "обновить аватар"/"загрузить аватар" / по умолчанию btm btn-info
+            'previewSize'=> 'file',                                         // размер изображения для превью(либо file_small, либо просто file)
             'pluginOptions' => [                                            // настройки плагина
                 'aspectRatio' => 1/1,                                       // установите соотношение сторон рамки обрезки. По умолчанию свободное отношение.
                 'strict' => false,                                          // true - рамка не может вызодить за холст, false - может
