@@ -10,11 +10,15 @@ namespace phpnt\cropper\controllers;
 use yii\helpers\Json;
 use phpnt\cropper\models\ImageForm;
 use yii\web\Controller;
+use Yii;
 
 class ImagesController extends Controller
 {
     public function actionAutoloadImage()
     {
+        if (!Yii::$app->request->isAjax) {
+            return $this->goBack();
+        }
         $imageData = \Yii::$app->request->post('imageData');
         $modelImageForm = new ImageForm();
 
@@ -39,7 +43,7 @@ class ImagesController extends Controller
 
         $render = ($imageData['images_num'] == 1) ? '_image' : '_image-many';
 
-        return $this->render(
+        return $this->renderAjax(
             '@vendor/phpnt/yii2-cropper/views/'.$render,
             [
                 'imagesObject'              => $imagesObject,
@@ -76,6 +80,9 @@ class ImagesController extends Controller
      */
     public function actionDeleteImage()
     {
+        if (!Yii::$app->request->isAjax) {
+            return $this->goBack();
+        }
         $imageData = Json::decode(\Yii::$app->request->post('imageData'));
         $modelImageForm = new ImageForm();
         $modelImageForm->deleteImage();
@@ -94,7 +101,7 @@ class ImagesController extends Controller
 
         $render = ($imageData['images_num'] == 1) ? '_image' : '_image-many';
 
-        return $this->render(
+        return $this->renderAjax(
             '@vendor/phpnt/yii2-cropper/views/'.$render,
             [
                 'imagesObject'              => $imagesObject,
