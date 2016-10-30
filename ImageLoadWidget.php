@@ -181,7 +181,7 @@ JS;
                         data: {imageData: imageDataMany},
                         container: "#images-widget-$this->id",
                         scrollTo: false,
-                        push: false
+                        push: false,
                     });
                 } else {
                 return false;
