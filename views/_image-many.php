@@ -102,6 +102,8 @@ echo Html::input('hidden', 'imageData[imageSmallHeight]', $imageSmallHeight);
 echo Html::input('hidden', 'imageData[createImageText]', $createImageText);
 echo Html::input('hidden', 'imageData[updateImageText]', $updateImageText);
 echo Html::input('hidden', 'imageData[deleteImageText]', $deleteImageText);
+echo Html::input('hidden', 'imageData[buttonClass]', $buttonClass);
+echo Html::input('hidden', 'imageData[previewSize]', $previewSize);
 echo Html::input('hidden', 'imageData[frontendUrl]', $frontendUrl);
 echo Html::input('hidden', 'imageData[baseUrl]', $baseUrl);
 echo Html::input('hidden', 'imageData[imagePath]', $imagePath);
